@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DriveUp</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0a0a0a;
+    --card:#111;
+    --white:#ffffff;
+    --gray:#888;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--white);
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    background:black;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#ccc;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:40px;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:url('hero.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+}
+
+.hero h1{
+    font-size:3.5rem;
+}
+
+.hero p{
+    color:#ccc;
+}
+
+/* BOTONES */
+button{
+    background:white;
+    color:black;
+    border:none;
+    padding:12px 30px;
+    margin-top:20px;
+    cursor:pointer;
+    font-weight:600;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#ddd;
+}
+
+/* CATÁLOGO */
+.catalog{
+    padding:60px 5%;
+}
+
+.catalog h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:var(--card);
+    width:280px;
+    border-radius:10px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px;
+}
+
+.card p{
+    margin:0 15px 10px;
+    color:var(--gray);
+}
+
+.price{
+    color:white;
+    font-weight:bold;
+}
+
+.card button{
+    margin:15px;
+    margin-top:auto;
+}
+
+/* CONTACTO */
+.contact{
+    padding:60px 20px;
+    text-align:center;
+}
+
+input, textarea{
+    width:90%;
+    max-width:400px;
+    padding:12px;
+    margin:10px auto;
+    display:block;
+    border:none;
+    border-radius:5px;
+    box-sizing:border-box;
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="logo">
+<img src="logo.png">
+<span>DriveUp</span>
+</div>
+
+<div>
+<a href="#inicio">Inicio</a>
+<a href="#autos">Autos</a>
+<a href="#contacto">Contacto</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+<div class="hero-content">
+<h1>DriveUp</h1>
+<p>Autos deportivos y de lujo al más alto nivel</p>
+<a href="#autos"><button>Explorar catálogo</button></a>
+</div>
+</section>
+
+<!-- AUTOS -->
+<section class="catalog" id="autos">
+<h2>Vehículos exclusivos</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="auto1.jpg">
+<h3>BMW Serie 3 2022</h3>
+<p class="price">$650,000</p>
+<p>Automático • Deportivo</p>
+<button>Ver más</button>
+</div>
+
+<div class="card">
+<img src="auto2.jpg">
+<h3>Audi A5 Sportback 2021</h3>
+<p class="price">$720,000</p>
+<p>Turbo • Elegante</p>
+<button>Ver más</button>
+</div>
+
+<div class="card">
+<img src="auto3.jpg">
+<h3>Mercedes-Benz Clase C 2020</h3>
+<p class="price">$680,000</p>
+<p>Lujo • Confort</p>
+<button>Ver más</button>
+</div>
+
+<div class="card">
+<img src="auto4.jpg">
+<h3>Porsche Macan 2021</h3>
+<p class="price">$1,100,000</p>
+<p>Premium • SUV</p>
+<button>Ver más</button>
+</div>
+
+<div class="card">
+<img src="auto5.jpg">
+<h3>Range Rover Evoque 2024</h3>
+<p class="price">$1,250,000</p>
+<p>4x4 • Exclusivo</p>
+<button>Ver más</button>
+</div>
+
+<div class="card">
+<img src="auto6.jpg">
+<h3>Lamborghini Urus 2022</h3>
+<p class="price">$5,500,000</p>
+<p>Super SUV • Lujo extremo</p>
+<button>Ver más</button>
+</div>
+
+<div class="card">
+<img src="auto7.jpg">
+<h3>Ferrari F8 Tributo 2022</h3>
+<p class="price">$6,200,000</p>
+<p>Superdeportivo • V8 Turbo</p>
+<button>Ver más</button>
+</div>
+
+<div class="card">
+<img src="auto8.jpg">
+<h3>Lamborghini Huracán EVO 2021</h3>
+<p class="price">$7,000,000</p>
+<p>V10 • Alto rendimiento</p>
+<button>Ver más</button>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+<h2>Contáctanos</h2>
+
+<input type="text" placeholder="Nombre">
+<input type="email" placeholder="Correo electrónico">
+<textarea placeholder="Mensaje"></textarea>
+<br>
+<button>Enviar</button>
+
+</section>
+
+</body>
+</html>
